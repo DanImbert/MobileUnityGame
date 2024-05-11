@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Mergeable
   - Heart
+  - GoldCoin
+  - Diamond
+  - LightningBolt
+  - BlackStar
+  - YellowStar
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MergeableObject : MonoBehaviour
 {
-	protected int mergeValue = 1; // Value of the merged object
+	public int mergeValue { get; protected set; } = 1;
 	protected string objectTypeTag; // Tag to identify the object type
 
 	protected virtual void Start()

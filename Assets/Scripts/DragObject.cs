@@ -19,7 +19,7 @@ public class DragObject : MonoBehaviour
 			{
 				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touch.position), Vector2.zero);
 
-				if (hit.collider != null && hit.collider.gameObject.CompareTag("YellowStar") && hit.collider.gameObject == gameObject && !isBeingDragged)
+				if (hit.collider != null && hit.collider.gameObject == gameObject && !isBeingDragged)
 					{
 					isBeingDragged = true;
 					touchPosition = touch.position;
@@ -49,6 +49,28 @@ public class DragObject : MonoBehaviour
 		if (touchReleased && gameObject.CompareTag("YellowStar") && collision.gameObject.CompareTag("YellowStar"))
 		{
 			Instantiate(Resources.Load("GoldCoin_Object"), transform.position, Quaternion.identity);
+			touchReleased = false;
+			Destroy(collision.gameObject);
+			Destroy(gameObject);
+		}
+
+		else if (touchReleased && gameObject.CompareTag("GoldCoin") && collision.gameObject.CompareTag("GoldCoin"))
+		{
+			Instantiate(Resources.Load("Diamond_Object"), transform.position, Quaternion.identity);
+			touchReleased = false;
+			Destroy(collision.gameObject);
+			Destroy(gameObject);
+		}
+		else if (touchReleased && gameObject.CompareTag("Diamond") && collision.gameObject.CompareTag("Diamond"))
+		{
+			Instantiate(Resources.Load("LightningBolt_Object"), transform.position, Quaternion.identity);
+			touchReleased = false;
+			Destroy(collision.gameObject);
+			Destroy(gameObject);
+		}
+		else if (touchReleased && gameObject.CompareTag("LightningBolt") && collision.gameObject.CompareTag("LightningBolt"))
+		{
+			Instantiate(Resources.Load("BlackStar_Object"), transform.position, Quaternion.identity);
 			touchReleased = false;
 			Destroy(collision.gameObject);
 			Destroy(gameObject);

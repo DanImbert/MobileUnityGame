@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8808428642062269362}
   - component: {fileID: 5518572525891071589}
   - component: {fileID: 6109029499109765687}
-  - component: {fileID: 280358373237267179}
+  - component: {fileID: 2884914215883822455}
   m_Layer: 0
-  m_Name: BlackStar
+  m_Name: BlackStar_Object
   m_TagString: BlackStar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &280358373237267179
+--- !u!114 &2884914215883822455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,6 +168,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8422578131301795851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad2e7ca11243c44a9945f4931b0e91c, type: 3}
+  m_Script: {fileID: 11500000, guid: df3a53a3d766a85478df7575758a401e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
